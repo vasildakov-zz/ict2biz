@@ -7,11 +7,45 @@
         "zf2"
     ],
     "homepage": "http://framework.zend.com/",
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "sebastianbergmann/phpcov",
+                "version": "1.1.0",
+                "dist": {
+                    "url": "https://github.com/sebastianbergmann/phpcov/archive/1.1.0.zip",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "https://github.com/sebastianbergmann/phpcov.git",
+                    "type": "git",
+                    "reference": "1.1.0"
+                },
+                "bin": [
+                    "phpcov.php"
+                ]
+            }
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.4.*",
         "zendframework/zftool": "dev-master",
         "zendframework/zend-developer-tools": "dev-master",
-        "zendframework/zenddiagnostics": "1.0.*@dev"
+        "zendframework/zenddiagnostics": "1.0.*@dev",
+        "doctrine/doctrine-module": "0.*",
+        "doctrine/doctrine-orm-module": "0.*",
+        "doctrine/migrations": "1.0.*@dev",
+        "hounddog/doctrine-data-fixture-module": "0.0.*",
+        "bjyoungblood/bjy-profiler": "dev-master",
+        "fzaninotto/faker": "1.5.*@dev",
+        "ircmaxell/random-lib": "1.0.*@dev"
+    },
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master",
+        "sebastianbergmann/phpcov": "1.1.0",
+        "phploc/phploc": "*",
+        "sebastian/phpdcd": "*"
     }
 }
