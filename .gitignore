@@ -1,6 +1,7 @@
 nbproject
 ._*
 .~lock.*
+*.php~
 .buildpath
 .DS_Store
 .idea
