@@ -40,7 +40,8 @@
         "hounddog/doctrine-data-fixture-module": "0.0.*",
         "bjyoungblood/bjy-profiler": "dev-master",
         "fzaninotto/faker": "1.5.*@dev",
-        "ircmaxell/random-lib": "1.0.*@dev"
+        "ircmaxell/random-lib": "1.0.*@dev",
+        "jms/serializer": "0.15.*@dev"
     },
     "require-dev": {
         "satooshi/php-coveralls": "dev-master",

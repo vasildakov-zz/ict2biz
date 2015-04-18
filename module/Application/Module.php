@@ -26,6 +26,30 @@ class Module
         return include __DIR__ . '/config/module.config.php';
     }
 
+    public function getControllerConfig() 
+    {
+        return array(
+            'invokables' => array(
+                'Application\Controller\Index' => 'Application\Controller\IndexController'
+            ),
+            'factories' => array(
+                'Application\Controller\Book' =>  'Application\Factory\Controller\BookControllerFactory',
+            ),
+        );
+    }
+
+    public function getServiceConfig()
+    {
+        return array(
+            'abstract_factories' => array(),
+            'aliases' => array(),
+            'factories' => array(),
+            'invokables' => array(),
+            'services' => array(),
+            'shared' => array(),
+        );
+    }
+
     public function getAutoloaderConfig()
     {
         return array(

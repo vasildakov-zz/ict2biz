@@ -8,14 +8,13 @@
 return array(
     'modules' => array(
         'Application',
-        'Domain',
-        'Rest',
         'DoctrineModule',
         'DoctrineORMModule',
         'DoctrineDataFixtureModule',
         'BjyProfiler',
         'ZendDeveloperTools',
         'ZFTool',
+        'Rest',
     ),
     'module_listener_options' => array(
         'module_paths' => array(

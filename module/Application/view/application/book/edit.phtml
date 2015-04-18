@@ -1,0 +1,50 @@
+<div class="container">
+	<?php
+	// module/Application/view/application/book/edit.phtml:
+	$title = 'Edit Book';
+	$this->headTitle($title);
+	?>
+	<div class="row">
+		<h1><?php echo $this->escapeHtml($title); ?></h1>
+	</div>
+
+
+	<div class="row">
+	<?php 
+	$form = $this->form;
+	$form->prepare(); 
+	echo $this->form()->openTag($form); 
+	$book = $form->get('book'); ?>
+
+	<div class="form-group">
+		<?php echo $this->formHidden($book->get('id')); ?>
+	</div>
+
+	<div class="form-group">
+		<?php echo $this->formLabel($book->get('title')); ?>
+		<?php echo $this->formInput($book->get('title'));?>
+	</div>
+
+	<div class="form-group">
+		<?php echo $this->formLabel($book->get('isbn')); ?>
+		<?php echo $this->formInput($book->get('isbn'));?>
+	</div>
+
+	<div class="form-group">
+		<?php echo $this->formLabel($book->get('description')); ?>
+		<?php echo $this->formTextarea($book->get('description'));?>
+	</div>
+
+	<div class="form-group">
+		<?php echo $this->formLabel($book->get('published')); ?>
+		<?php //$dt = $book->get('published')->getValue()->format("Y-m-d"); ?>
+		<?php echo $this->formInput($book->get('published'));?>
+	</div>
+
+	<div class="form-group">
+		<?php echo $this->formInput($form->get('submit'));?>
+	</div>
+
+	<?php echo $this->form()->closeTag(); ?>
+	</div>
+</div>
