@@ -342,4 +342,48 @@ class Relative extends \Domain\Entity\Relative implements \Doctrine\ORM\Proxy\Pr
         return parent::getPassword();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function setFirstName($firstName)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setFirstName', array($firstName));
+
+        return parent::setFirstName($firstName);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getFirstName()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFirstName', array());
+
+        return parent::getFirstName();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setLastName($lastName)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLastName', array($lastName));
+
+        return parent::setLastName($lastName);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLastName()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLastName', array());
+
+        return parent::getLastName();
+    }
+
 }

@@ -64,10 +64,10 @@ class User extends \Domain\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'id', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'email', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'password', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'gender', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'birthday', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'status', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'createdAt');
+            return array('__isInitialized__', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'id', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'email', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'password', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'firstName', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'lastName', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'gender', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'birthday', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'status', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'createdAt');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'id', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'email', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'password', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'gender', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'birthday', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'status', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'createdAt');
+        return array('__isInitialized__', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'id', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'email', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'password', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'firstName', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'lastName', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'gender', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'birthday', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'status', '' . "\0" . 'Domain\\Entity\\User' . "\0" . 'createdAt');
     }
 
     /**
@@ -318,6 +318,50 @@ class User extends \Domain\Entity\User implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPassword', array());
 
         return parent::getPassword();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setFirstName($firstName)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setFirstName', array($firstName));
+
+        return parent::setFirstName($firstName);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getFirstName()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFirstName', array());
+
+        return parent::getFirstName();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setLastName($lastName)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLastName', array($lastName));
+
+        return parent::setLastName($lastName);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLastName()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLastName', array());
+
+        return parent::getLastName();
     }
 
 }
